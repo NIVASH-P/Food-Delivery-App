@@ -1,10 +1,11 @@
-import './App.css';
-import NavBar from './components/NavBar/NavBar';
 
+import './App.css';
+import { PlaceOrder } from './components/pages/PlaceOrder/PlaceOrder';
 function App() {
   return (
     <div className="App">
-        <NavBar />
+
+        <PlaceOrder/>
     </div>
   );
 }
