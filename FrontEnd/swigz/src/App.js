@@ -1,12 +1,15 @@
+// src/App.js
+import React from 'react';
 
-import './App.css';
-import { PlaceOrder } from './components/pages/PlaceOrder/PlaceOrder';
+import Header from './components/Header/Header';
+
 function App() {
   return (
-    <div className="App">
-
-        <PlaceOrder/>
-    </div>
+   
+      <div className="App">
+          <Header/>
+      </div>
+    
   );
 }
 
