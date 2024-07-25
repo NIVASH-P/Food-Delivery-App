@@ -1,5 +1,6 @@
 .header
 {
+
     height: 34vw;
     margin: 30px auto;
     background: url('../../Assests/header_img.png') no-repeat;
@@ -37,5 +38,5 @@
     background-color: white;
     font-weight: 500;
     font-size: max(1vw,13px);
-    padding: 1vw 2.3vw ;
+    padding: 1.1vw 2.3vw ;
 }
