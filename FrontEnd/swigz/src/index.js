@@ -8,12 +8,18 @@ import StoreContextProvider from './components/Exploremenu/context';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+<<<<<<< HEAD
   <BrowserRouter>
+=======
+>>>>>>> 3f3c559 (Assests upload)
   <StoreContextProvider>
         <App />
 
   </StoreContextProvider>
+<<<<<<< HEAD
   </BrowserRouter>
+=======
+>>>>>>> 3f3c559 (Assests upload)
 );
 
 // If you want to start measuring performance in your app, pass a function

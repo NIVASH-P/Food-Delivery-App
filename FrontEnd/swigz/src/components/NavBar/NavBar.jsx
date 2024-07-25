@@ -1,13 +1,22 @@
 import React, { useContext, useState } from 'react'
 import './NavBar.css'
 import {assets} from '../../Assests/assets'
+<<<<<<< HEAD
 
 export default function NavBar() {
   const[menu,setMenu] = useState('Home')
+=======
+import { Link, useNavigate } from 'react-router-dom'
+
+export default function NavBar({setShowLogin}) {
+  const[menu,setMenu] = useState('Home')
+  const nav = useNavigate();
+>>>>>>> 3f3c559 (Assests upload)
   return (
     <div className='NavBar'>
         <img src={assets.logo} alt="" className='logo' />
         <ul className='menubar-items'>
+<<<<<<< HEAD
             <li onClick={()=>{setMenu('Home')}} className={menu === 'Home' ? 'active' : ''}>Home</li>
             <li onClick={()=>{setMenu('menu')}} className={menu === 'menu' ? 'active' : ''}>menu</li>
             <li onClick={()=>{setMenu('mobile-app')}} className={menu === 'mobile-app' ? 'active' : ''}>mobile-app</li>
@@ -20,6 +29,32 @@ export default function NavBar() {
               <div className="dot"></div>
             </div>
             <button className='navBar-Button'>sign in</button>
+=======
+            <li  onClick={()=>{setMenu('Home')
+              nav("/")
+            }} className={menu === 'Home' ? 'active' : ''}>Home</li>
+            <li onClick={()=>{setMenu('menu')
+              nav("/menu")
+            }} className={menu === 'menu' ? 'active' : ''}>menu</li>
+            <li component={Link} to='/mobile-app' onClick={()=>{setMenu('mobile-app')
+              nav("/mobile-app")
+            }} className={menu === 'mobile-app' ? 'active' : ''}>mobile-app</li>
+            <li component={Link} to={'/contact us'} onClick={()=>{setMenu('contact us')
+              nav("/contact us")
+            }} className={menu === 'contact us' ? 'active' : ''}>contact us</li>
+        </ul>
+        <div className='navBar-right'>
+          <Link to='search_icon'>
+            <img src={assets.search_icon} alt="" />
+          </Link>
+            <div className="navBarSearch-icons">
+              <Link to='/basket_icon'>
+                <img src={assets.basket_icon} alt="" />
+              </Link>
+              <div className="dot"></div>
+            </div>
+            <button className='navBar-Button' onClick={()=>setShowLogin(true)}>sign in</button>
+>>>>>>> 3f3c559 (Assests upload)
         </div>
     </div>
   )

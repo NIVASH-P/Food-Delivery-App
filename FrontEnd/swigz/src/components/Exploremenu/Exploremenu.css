@@ -2,6 +2,10 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
+<<<<<<< HEAD
+=======
+    margin-top: 5%;
+>>>>>>> 3f3c559 (Assests upload)
 }
 .explore-menu h1{
    color: #262626;
