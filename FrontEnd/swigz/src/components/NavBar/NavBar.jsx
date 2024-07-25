@@ -34,20 +34,6 @@ export default function NavBar({setShowLogin}) {
               <div className="dot"></div>
             </div>
             <button className='navBar-Button' onClick={()=>setShowLogin(true)}>sign in</button>
-            <ul>
-            <li onClick={()=>{setMenu('Home')}} className={menu === 'Home' ? 'active' : ''}>Home</li>
-            <li onClick={()=>{setMenu('menu')}} className={menu === 'menu' ? 'active' : ''}>menu</li>
-            <li onClick={()=>{setMenu('mobile-app')}} className={menu === 'mobile-app' ? 'active' : ''}>mobile-app</li>
-            <li onClick={()=>{setMenu('contact us')}} className={menu === 'contact us' ? 'active' : ''}>contact us</li>
-        </ul>
-        <div className='navBar-right'>
-            <img src={assets.search_icon} alt="" />
-            <div className="navBarSearch-icons">
-              <img src={assets.basket_icon} alt="" />
-              <div className="dot"></div>
-            </div>
-            <button className='navBar-Button'>sign in</button>
-        </div>
     </div>
     </div>
   )

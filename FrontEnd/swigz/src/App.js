@@ -7,6 +7,7 @@ import { Cart } from './components/pages/Cart/Cart'
 
 import { PlaceOrder } from './components/pages/PlaceOrder/PlaceOrder';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { useState } from 'react';
 function App() {
   const[category,setCategory] = useState("All");
   const[showLogin,setShowLogin] = useState(false)
@@ -21,9 +22,6 @@ function App() {
           <Route path="/mobile-app" element={<Fooddisplay category={category} />} />  
           <Route path="/mobile-app" element={<Exploremenu category={category} setCategory={setCategory} />} />  
         </Routes>
-
-        <Cart />
-        <PlaceOrder />
       </BrowserRouter>
     </div>
   );

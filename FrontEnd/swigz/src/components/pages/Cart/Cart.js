@@ -1,7 +1,6 @@
   import React, { useContext } from 'react';
 import './cart.css'
-import { StoreContext } from '../../context/StoreContext'
-import { StoreContext } from '../../Exploremenu/context';
+import { StoreContext } from '../../Exploremenu/context'
 export const Cart = () => {
 const {cartItems,food_list, removeFromCart} = useContext(StoreContext);
 return (
@@ -18,7 +17,7 @@ return (
 <br />
 <hr />
 {food_list.map((item,index)=>{
-if(cartItems[item._id]>0)
+if(cartItems && cartItems[item._id]>0)
 {
 return (
     <div>

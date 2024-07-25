@@ -1,6 +1,8 @@
 import React from 'react'
 import './Exploremenu.css'
 import { menu_list } from '../../Assests/assets'
+import { FootItem } from '../FoodItems/FootItem'
+import { Fooddisplay } from '../Fooddisplay/Fooddisplay'
 
 export const Exploremenu = ({category ,setCategory}) => {
   return (
@@ -20,7 +22,7 @@ export const Exploremenu = ({category ,setCategory}) => {
         </div>
       
       <hr/>
-
+      <Fooddisplay category={category} />
     </div>
   )
 }
