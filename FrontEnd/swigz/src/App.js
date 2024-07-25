@@ -1,25 +1,3 @@
-import { useState } from 'react';
-<<<<<<< HEAD
-import { Exploremenu } from './components/Exploremenu/Exploremenu';
-import NavBar from './components/NavBar/NavBar';
-import { Fooddisplay } from './components/Fooddisplay/Fooddisplay';
-import { Footer } from './components/Footer/Footer';
-import { AppDownload } from './components/App/AppDownload';
-
-import './App.css';
-import { PlaceOrder } from './components/pages/PlaceOrder/PlaceOrder';
-function App() {
-
-  const [category,setCategory]=useState("All");
-  return (
-    <div className="App">
-        <PlaceOrder/>
-        <NavBar />
-         <Exploremenu category={category} setCategory={setCategory}/>
-         <Fooddisplay category={category}/>
-         <AppDownload/>
-         <Footer/>
-=======
 import './App.css';
 import NavBar from './components/NavBar/NavBar';
 import Login from './components/Login/Login';
@@ -47,7 +25,6 @@ function App() {
         <Cart />
         <PlaceOrder />
       </BrowserRouter>
->>>>>>> 3f3c559 (Assests upload)
     </div>
   );
 }

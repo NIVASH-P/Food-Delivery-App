@@ -1,15 +1,11 @@
   import React, { useContext } from 'react';
 import './cart.css'
-<<<<<<< HEAD
 import { StoreContext } from '../../context/StoreContext'
-=======
 import { StoreContext } from '../../Exploremenu/context';
->>>>>>> 3f3c559 (Assests upload)
 export const Cart = () => {
 const {cartItems,food_list, removeFromCart} = useContext(StoreContext);
 return (
 <div className='cart'>
-<<<<<<< HEAD
 <div className="cart-items">
 <div className="cart-items-title">
 <p>Items</p>
@@ -67,7 +63,6 @@ return (
         </div>
 </div>
 </div>
-=======
     <div className="cart-items">
         <div className="cart-items-title">
             <p>Items</p>
@@ -125,7 +120,6 @@ return (
             </div>
         </div>
     </div>
->>>>>>> 3f3c559 (Assests upload)
 </div>
 );
 }
