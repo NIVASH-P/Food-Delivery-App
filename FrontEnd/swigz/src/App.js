@@ -5,6 +5,7 @@ import NavBar from './components/NavBar/NavBar';
 import { Fooddisplay } from './components/Fooddisplay/Fooddisplay';
 import { Footer } from './components/Footer/Footer';
 import { AppDownload } from './components/App/AppDownload';
+import { ChatBot } from './components/Chat/ChatBot';
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
          <Fooddisplay category={category}/>
          <AppDownload/>
          <Footer/>
+         <ChatBot/>
     </div>
   );
 }
