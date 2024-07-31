@@ -3,6 +3,7 @@ package com.swigz.swigz.Controller;
 import org.springframework.beans.factory.annotation.Autowired;
 // import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Component;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -29,12 +30,13 @@ import lombok.extern.slf4j.Slf4j;
 @RestController
 @RequestMapping("/otp")
 @Slf4j
+@CrossOrigin("*")
 public class SmsController {
     
     @Autowired
     private SmsService smsService;
 
-    @GetMapping("process")
+    @GetMapping("/process")
     public String processSMS()
     {
         return "SMS Sent";

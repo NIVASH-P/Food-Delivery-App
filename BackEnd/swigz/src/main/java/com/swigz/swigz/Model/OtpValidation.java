@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class OtpValidation {
-    private String Number;
-    private String otpNumber;
+    private String number;
+    private String oneTimePassword;
 }
 

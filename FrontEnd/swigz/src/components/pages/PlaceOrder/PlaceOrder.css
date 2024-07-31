@@ -11,7 +11,7 @@ body {
 .place-order {
     display: flex;
     justify-content: space-between;
- 
+    margin-top: 5%;
     padding: 20px;
     border-radius: 10px;
 

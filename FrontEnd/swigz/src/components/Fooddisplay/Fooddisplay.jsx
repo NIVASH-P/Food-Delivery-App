@@ -21,7 +21,6 @@ export const Fooddisplay = ({category}) => {
                 }
             })}
         </div>
-
     </div>
   )
 }
