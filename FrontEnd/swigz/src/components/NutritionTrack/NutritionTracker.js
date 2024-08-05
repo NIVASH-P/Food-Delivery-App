@@ -12,7 +12,7 @@ const data = [
   { name: "Salad with egg", kcal: 320, weight: 150, carbs: 56, protein: 69, fat: 25 },
   { name: "Green Salad", kcal: 320, weight: 150, carbs: 56, protein: 69, fat: 25 },
   { name: "Salad with egg", kcal: 320, weight: 150, carbs: 56, protein: 69, fat: 25 },
-  { name: "Green Salad", kcal: 320, weight: 150, carbs: 56, protein: 69, fat: 25 },
+  { name: "Green Saladd", kcal: 320, weight: 150, carbs: 56, protein: 69, fat: 25 },
   { name: "Salad with egg", kcal: 320, weight: 150, carbs: 56, protein: 69, fat: 25 },
   { name: "Green Salad", kcal: 320, weight: 150, carbs: 56, protein: 69, fat: 25 },
   { name: "Salad with egg", kcal: 320, weight: 150, carbs: 56, protein: 69, fat: 25 },
