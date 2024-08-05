@@ -14,7 +14,7 @@ export const Fooddisplay = ({ category }) => {
       } else {
         setSelectedItem(item);
       }
-  };
+  }; 
 
   return (
 
