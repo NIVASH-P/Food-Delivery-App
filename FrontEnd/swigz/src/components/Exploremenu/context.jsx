@@ -22,8 +22,7 @@ const StoreContextProvider =(props)=>{
         setCardItems((prev)=>({...prev,[itemId]:prev[itemId]-1
         }))
     }
-
-   const getTotalcard =()=>{
+    const getTotalcard =()=>{
     let total=0;
     for(const item in cardItems)
     {
