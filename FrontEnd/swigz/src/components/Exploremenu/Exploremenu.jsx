@@ -1,8 +1,13 @@
 import React from 'react'
 import './Exploremenu.css'
 import { menu_list } from '../../Assests/assets'
+import { FootItem } from '../FoodItems/FootItem'
+import { Fooddisplay } from '../Fooddisplay/Fooddisplay'
 
 export const Exploremenu = ({category ,setCategory}) => {
+
+  const selectedMenu = menu_list.find(item => item.menu_name === category);
+
   return (
     <div className='explore-menu' id='explore-menu'>
         
@@ -20,7 +25,7 @@ export const Exploremenu = ({category ,setCategory}) => {
         </div>
       
       <hr/>
-
+      <Fooddisplay category={category} />
     </div>
   )
 }

@@ -2,7 +2,7 @@
 
 *{
     padding: 0;
-    margin: 5px;
+    margin: 0px;
     box-sizing: border-box;
     font-family: Outfit;
 }
@@ -22,6 +22,7 @@
     color: #495449;
     font-size: 18px;
     cursor: pointer;
+    text-decoration: none;
 }
 .navBar-right{
     display: flex;

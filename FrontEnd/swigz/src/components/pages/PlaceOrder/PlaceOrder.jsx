@@ -46,7 +46,7 @@ export const PlaceOrder=()=>
 
 
                 </div>
-                <button>payment</button>
+                <button className="payment">payment</button>
             </div>
 
         </form>

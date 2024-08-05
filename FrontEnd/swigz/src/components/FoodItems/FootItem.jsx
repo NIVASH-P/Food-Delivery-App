@@ -2,6 +2,7 @@ import React, { useContext, useState } from 'react'
 import './FoodItem.css';
 import { assets } from '../../Assests/assets';
 import { StoreContext } from '../Exploremenu/context';
+import { Link } from 'react-router-dom';
 
 export const FootItem = ({id,name,price,description,image}) => {
 

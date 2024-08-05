@@ -3,6 +3,7 @@
 
 }
 .foot-display h1{
+    /* margin-top: 10%; */
     font-size: max(2vw,24px);
     font-weight: 600;
 }
