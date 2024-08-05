@@ -24,17 +24,17 @@ const StoreContextProvider =(props)=>{
     }
 
    const getTotalcard =()=>{
-    let total=0;
-    for(const item in cardItems)
-    {
-        if(cardItems[item]>0){
+        let total=0;
+        for(const item in cardItems)
+        {
+            if(cardItems[item]>0){
 
-        let iteminfo=food_list.find((product)=>product._id==item);
-        total+=iteminfo.price* cardItems[item]
+            let iteminfo=food_list.find((product)=>product._id==item);
+            total+=iteminfo.price* cardItems[item]
 
+            }
         }
-    }
-    return total;
+        return total;
    }
 
     const contextValue={

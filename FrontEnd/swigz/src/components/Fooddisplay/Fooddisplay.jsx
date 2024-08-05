@@ -2,7 +2,6 @@ import React, { useContext, useState } from 'react'
 import './Fooddisplay.css';
 import { StoreContext } from '../Exploremenu/context';
 import { FootItem } from '../FoodItems/FootItem';
-import { Recipe } from '../Recipe/Recipe';
 
 export const Fooddisplay = ({ category }) => {
   const { food_list } = useContext(StoreContext);
@@ -19,12 +18,6 @@ export const Fooddisplay = ({ category }) => {
   return (
 
     <div>
-        {selectedItem && (
-        <Recipe
-          category={selectedItem.name}
-          itemImage={selectedItem.image}
-        />
-      )}
     <div className='food-display' id='food-display'>
 
 
