@@ -1,12 +1,24 @@
 // src/NutritionTracker.js
-import React from 'react';
-import { Container, Typography, Box, Grid, Card, CardContent, CircularProgress } from '@mui/material';
-import './Nutrition.css';
+import React, { useState } from 'react';
+import { Container, Typography, Box, Grid, Card, CardContent, CircularProgress, Button, Dialog, DialogContent, DialogTitle } from '@mui/material';
+import './NutritionTracker.css';
 
 const data = [
   { name: "Green Salad", kcal: 320, weight: 150, carbs: 56, protein: 69, fat: 25 },
   { name: "Salad with egg", kcal: 320, weight: 150, carbs: 56, protein: 69, fat: 25 },
-
+  { name: "Green Salad", kcal: 320, weight: 150, carbs: 56, protein: 69, fat: 25 },
+  { name: "Salad with egg", kcal: 320, weight: 150, carbs: 56, protein: 69, fat: 25 },
+  { name: "Green Salad", kcal: 320, weight: 150, carbs: 56, protein: 69, fat: 25 },
+  { name: "Salad with egg", kcal: 320, weight: 150, carbs: 56, protein: 69, fat: 25 },
+  { name: "Green Salad", kcal: 320, weight: 150, carbs: 56, protein: 69, fat: 25 },
+  { name: "Salad with egg", kcal: 320, weight: 150, carbs: 56, protein: 69, fat: 25 },
+  { name: "Green Salad", kcal: 320, weight: 150, carbs: 56, protein: 69, fat: 25 },
+  { name: "Salad with egg", kcal: 320, weight: 150, carbs: 56, protein: 69, fat: 25 },
+  { name: "Green Salad", kcal: 320, weight: 150, carbs: 56, protein: 69, fat: 25 },
+  { name: "Salad with egg", kcal: 320, weight: 150, carbs: 56, protein: 69, fat: 25 },
+  { name: "Green Salad", kcal: 320, weight: 150, carbs: 56, protein: 69, fat: 25 },
+  { name: "Salad with egg", kcal: 320, weight: 150, carbs: 56, protein: 69, fat: 25 },
+  
 ];
 
 const ProgressCircle = ({ value, maxValue, color }) => (
@@ -14,28 +26,28 @@ const ProgressCircle = ({ value, maxValue, color }) => (
     <CircularProgress variant="determinate" value={(value / maxValue) * 100} style={{ color }} />
     <Box position="absolute">
       <Typography variant="caption" component="div" color="textSecondary" className="progressLabel">
-        {value}
+        {value}g
       </Typography>
     </Box>
   </Box>
 );
 
-const NutritionCard = ({ name, kcal, weight, carbs, protein, fat }) => (
+const NutritionCard = ({ item }) => (
   <Card className="card">
     <CardContent className="cardContent">
-      <Typography variant="h6" className="cardTitle">{name}</Typography>
-      <Typography className="cardText">{kcal} kcal - {weight}g</Typography>
+      <Typography variant="h6" className="cardTitle">{item.name}</Typography>
+      <Typography className="cardText">{item.kcal} kcal - {item.weight}g</Typography>
       <Grid container spacing={2}>
         <Grid item xs={4}>
-          <ProgressCircle value={carbs} maxValue={100} color="purple" />
+          <ProgressCircle value={item.carbs} maxValue={100} color="purple" />
           <Typography align="center" className="progressLabel">Carbs</Typography>
         </Grid>
         <Grid item xs={4}>
-          <ProgressCircle value={protein} maxValue={100} color="green" />
+          <ProgressCircle value={item.protein} maxValue={100} color="green" />
           <Typography align="center" className="progressLabel">Protein</Typography>
         </Grid>
         <Grid item xs={4}>
-          <ProgressCircle value={fat} maxValue={100} color="red" />
+          <ProgressCircle value={item.fat} maxValue={100} color="red" />
           <Typography align="center" className="progressLabel">Fat</Typography>
         </Grid>
       </Grid>
@@ -44,23 +56,46 @@ const NutritionCard = ({ name, kcal, weight, carbs, protein, fat }) => (
 );
 
 const NutritionTracker = () => {
+  const [selectedFood, setSelectedFood] = useState(null);
+  const [showContent, setShowContent] = useState(false);
+
+  const handleButtonClick = (item) => {
+    setSelectedFood(item);
+    setShowContent(true);
+  };
+
   return (
-    <div className='bod'>
     <Container className="container">
-      <Typography variant="h3" className="title">Remaining 1589 kcal</Typography>
-      <Box mt={2}>
-        <Typography variant="h4" className="subtitle">Daily nutrition's</Typography>
-        <Box mt={1}>
-          <Typography variant="h5" className="subtitle">Breakfast</Typography>
+      {!showContent && (
+        <Box className="buttonContainer">
           {data.map((item, index) => (
-            <Box mt={2} key={index}>
-              <NutritionCard {...item} />
-            </Box>
+            <Button
+              key={index}
+              variant="contained"
+              color="primary"
+              onClick={() => handleButtonClick(item)}
+              className="foodButton"
+            >
+              {item.name}
+            </Button>
           ))}
         </Box>
-      </Box>
+      )}
+      {showContent && selectedFood && (
+        <Box mt={2}>
+          <Typography variant="h3" className="title">Nutrition Details</Typography>
+          <Box mt={2}>
+            <Typography variant="h4" className="subtitle">{selectedFood.name}</Typography>
+            <NutritionCard item={selectedFood} />
+          </Box>
+          <Box mt={2} textAlign="center">
+            <Button variant="contained" color="secondary" onClick={() => setShowContent(false)} className="backButton">
+              Back
+            </Button>
+          </Box>
+        </Box>
+      )}
     </Container>
-    </div>
   );
 };
 
